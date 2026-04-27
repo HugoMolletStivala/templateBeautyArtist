@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nails Studio • Prothésiste Ongulaire Lille</title>
+    <title>Léa Studio • Prothésiste Ongulaire Lille</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -13,11 +13,11 @@
            PALETTE & TEXTURES
         ═══════════════════════════════════════════ */
         :root {
-            --bg: #fff7f2;          /* Pêche très clair et chaud */
-            --primary: #e07a5f;     /* Terre cuite */
-            --secondary: #f2cc8f;   /* Sable doré */
-            --accent: #fdf0e7;      /* Fond de carte */
-            --text: #3d405b;        /* Bleu Ardoise */
+            --bg: #fff7f2;          
+            --primary: #e07a5f;     
+            --secondary: #f2cc8f;   
+            --accent: #fdf0e7;      
+            --text: #3d405b;        
             --white: #ffffff;
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -32,11 +32,9 @@
             font-family: var(--font-sans);
             line-height: 1.5;
             position: relative;
-            /* TEXTURE DE GRAIN GÉNÉRALE */
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
         }
 
-        /* MOTIF DE FOND ABSTRAIT */
         body::before {
             content: "";
             position: absolute;
@@ -47,7 +45,6 @@
             z-index: -2;
         }
 
-        /* TÂCHES DE COULEUR (BLOBS) POUR LE RYTHME */
         .shape {
             position: absolute;
             z-index: -1;
@@ -130,7 +127,6 @@
             transition: 0.4s;
             box-shadow: 0 10px 30px rgba(224, 122, 95, 0.2);
         }
-        .btn-joy:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(224, 122, 95, 0.3); }
 
         .hero-visual {
             height: 75vh;
@@ -142,16 +138,15 @@
         .main-img-box {
             width: 100%;
             height: 100%;
-            border-radius: 40px; /* Coins plus ronds pour plus de douceur */
+            border-radius: 40px;
             overflow: hidden;
-            border: 12px solid var(--white); /* Effet cadre photo Polaroïd chic */
+            border: 12px solid var(--white);
             box-shadow: 0 40px 80px rgba(0,0,0,0.1);
         }
 
         .main-img-box img {
             width: 100%; height: 100%;
             object-fit: cover;
-            object-position: center;
         }
 
         /* ═══════════════════════════════════════════
@@ -196,7 +191,6 @@
             border-bottom: 1px solid rgba(61, 64, 91, 0.1);
         }
 
-        .service-name { font-weight: 700; font-size: 1.1rem; }
         .service-price { font-family: var(--font-serif); font-weight: 700; color: var(--primary); font-size: 1.3rem; }
 
         /* ═══════════════════════════════════════════
@@ -208,9 +202,7 @@
             color: var(--white);
             padding: 80px 40px;
             border-radius: 40px;
-            box-shadow: 0 30px 60px rgba(224, 122, 95, 0.3);
         }
-        .contact-cta h2 { font-family: var(--font-serif); font-size: 3.5rem; margin-bottom: 20px; }
         
         .links { display: flex; gap: 20px; justify-content: center; margin-top: 40px; }
         .btn-white {
@@ -221,11 +213,9 @@
             font-weight: 800;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 900px) {
             #hero { grid-template-columns: 1fr; text-align: center; padding-top: 140px; }
             .hero-visual { height: 50vh; order: -1; }
-            .price-list { padding: 30px; }
             nav { display: none; }
         }
     </style>
@@ -236,7 +226,7 @@
     <div class="shape shape-2"></div>
 
     <header>
-        <a href="#" class="logo">Nails Studio</a>
+        <a href="#" class="logo">Léa Studio</a>
         <nav>
             <a href="#galerie">Réalisations</a>
             <a href="#tarifs">Menu des Soins</a>
@@ -266,7 +256,7 @@
                 <div class="card"><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop" alt="Nail Art"></div>
                 <div class="card"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1000&auto=format&fit=crop" alt="Pose Gel"></div>
                 <div class="card"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1000&auto=format&fit=crop" alt="Manucure Lille"></div>
-                <div class="card"><img src="https://images.unsplash.com/photo-1610992015732-2449b0c26670?q=80&w=1000&auto=format&fit=crop" alt="Détails"></div>
+                <div class="card"><img src="Nails.webp" alt="Détails de la pose"></div>
             </div>
         </section>
 
@@ -297,7 +287,6 @@
         <section id="contact">
             <div class="contact-cta">
                 <h2>Prête à briller ?</h2>
-                <p>Réservez votre créneau par message privé ou téléphone.</p>
                 <div class="links">
                     <a href="#" class="btn-white">Instagram</a>
                     <a href="tel:0600000000" class="btn-white">06.00.00.00.00</a>
@@ -306,8 +295,8 @@
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 60px; color: var(--text); opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">
-        NAILS STUDIO LILLE • 2026 • HANDMADE WITH LOVE
+    <footer style="text-align: center; padding: 60px; color: var(--text); opacity: 0.5; font-size: 0.8rem;">
+        LÉA STUDIO LILLE • 2026
     </footer>
 
 </body>
