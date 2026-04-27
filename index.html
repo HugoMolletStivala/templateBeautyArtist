@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Léa Studio • Prothésiste Ongulaire Lille</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ═══════════════════════════════════════════
+           PALETTE & TEXTURES
+        ═══════════════════════════════════════════ */
+        :root {
+            --bg: #fff7f2;          /* Pêche très clair et chaud */
+            --primary: #e07a5f;     /* Terre cuite */
+            --secondary: #f2cc8f;   /* Sable doré */
+            --accent: #fdf0e7;      /* Fond de carte */
+            --text: #3d405b;        /* Bleu Ardoise */
+            --white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            line-height: 1.5;
+            position: relative;
+            /* TEXTURE DE GRAIN GÉNÉRALE */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        }
+
+        /* MOTIF DE FOND ABSTRAIT */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--secondary) 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+            opacity: 0.15;
+            z-index: -2;
+        }
+
+        /* TÂCHES DE COULEUR (BLOBS) POUR LE RYTHME */
+        .shape {
+            position: absolute;
+            z-index: -1;
+            filter: blur(80px);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .shape-1 { top: 10%; right: -5%; width: 400px; height: 400px; background: var(--secondary); }
+        .shape-2 { top: 40%; left: -10%; width: 500px; height: 500px; background: var(--primary); }
+
+        /* ═══════════════════════════════════════════
+           HEADER
+        ═══════════════════════════════════════════ */
+        header {
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            background: rgba(255, 247, 242, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo { 
+            font-family: var(--font-serif); 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            color: var(--primary);
+        }
+
+        nav a {
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text);
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+
+        /* ═══════════════════════════════════════════
+           HERO SECTION
+        ═══════════════════════════════════════════ */
+        #hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 0 8%;
+            gap: 60px;
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(3.5rem, 6vw, 5.5rem);
+            line-height: 1;
+            margin-bottom: 25px;
+            color: var(--text);
+        }
+
+        .hero-text h1 em { color: var(--primary); font-style: italic; font-weight: 400; }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            max-width: 450px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            opacity: 0.85;
+        }
+
+        .btn-joy {
+            display: inline-block;
+            padding: 18px 36px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(224, 122, 95, 0.2);
+        }
+        .btn-joy:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(224, 122, 95, 0.3); }
+
+        .hero-visual {
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-img-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 40px; /* Coins plus ronds pour plus de douceur */
+            overflow: hidden;
+            border: 12px solid var(--white); /* Effet cadre photo Polaroïd chic */
+            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+        }
+
+        .main-img-box img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* ═══════════════════════════════════════════
+           PORTFOLIO & TARIFS
+        ═══════════════════════════════════════════ */
+        #galerie, #tarifs { padding: 100px 8%; position: relative; }
+
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: var(--font-serif); font-size: 3.5rem; color: var(--text); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            aspect-ratio: 4/5;
+            border-radius: 24px;
+            overflow: hidden;
+            background: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+        .card:hover img { transform: scale(1.1); }
+
+        .price-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 60px;
+            border-radius: 32px;
+            border: 1px solid var(--white);
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(61, 64, 91, 0.1);
+        }
+
+        .service-name { font-weight: 700; font-size: 1.1rem; }
+        .service-price { font-family: var(--font-serif); font-weight: 700; color: var(--primary); font-size: 1.3rem; }
+
+        /* ═══════════════════════════════════════════
+           CONTACT
+        ═══════════════════════════════════════════ */
+        #contact { padding: 100px 8%; text-align: center; }
+        .contact-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 40px;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(224, 122, 95, 0.3);
+        }
+        .contact-cta h2 { font-family: var(--font-serif); font-size: 3.5rem; margin-bottom: 20px; }
+        
+        .links { display: flex; gap: 20px; justify-content: center; margin-top: 40px; }
+        .btn-white {
+            padding: 16px 32px;
+            background: var(--white);
+            color: var(--primary);
+            border-radius: 12px;
+            font-weight: 800;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            #hero { grid-template-columns: 1fr; text-align: center; padding-top: 140px; }
+            .hero-visual { height: 50vh; order: -1; }
+            .price-list { padding: 30px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <header>
+        <a href="#" class="logo">Léa Studio</a>
+        <nav>
+            <a href="#galerie">Réalisations</a>
+            <a href="#tarifs">Menu des Soins</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h1>L'éclat d'une <em>pose parfaite.</em></h1>
+                <p>Spécialiste de la manucure russe et du Nail Art créatif au cœur du Vieux-Lille.</p>
+                <a href="#galerie" class="btn-joy">Voir mon univers</a>
+            </div>
+            <div class="hero-visual">
+                <div class="main-img-box">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop" alt="Prothésiste ongulaire Lille">
+                </div>
+            </div>
+        </section>
+
+        <section id="galerie">
+            <div class="section-header">
+                <h2>Réalisations</h2>
+            </div>
+            <div class="grid">
+                <div class="card"><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop" alt="Nail Art"></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1000&auto=format&fit=crop" alt="Pose Gel"></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1000&auto=format&fit=crop" alt="Manucure Lille"></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1610992015732-2449b0c26670?q=80&w=1000&auto=format&fit=crop" alt="Détails"></div>
+            </div>
+        </section>
+
+        <section id="tarifs">
+            <div class="section-header">
+                <h2>Menu des Soins</h2>
+            </div>
+            <div class="price-list">
+                <div class="price-item">
+                    <span class="service-name">Manucure Russe + Gainage Gel</span>
+                    <span class="service-price">50€</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Extensions Capsules Américaines</span>
+                    <span class="service-price">65€</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Nail Art (Design par ongle)</span>
+                    <span class="service-price">2€</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Dépose & Soin Profond</span>
+                    <span class="service-price">25€</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-cta">
+                <h2>Prête à briller ?</h2>
+                <p>Réservez votre créneau par message privé ou téléphone.</p>
+                <div class="links">
+                    <a href="#" class="btn-white">Instagram</a>
+                    <a href="tel:0600000000" class="btn-white">06.00.00.00.00</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 60px; color: var(--text); opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">
+        LÉA STUDIO LILLE • 2026 • HANDMADE WITH LOVE
+    </footer>
+
+</body>
+</html>
