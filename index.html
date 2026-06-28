@@ -1192,22 +1192,23 @@ window.addEventListener('load',()=>{
 });
 
 /* ── NAV SCROLL ── */
+/* ── NAV SCROLL ── */
 const mast=document.getElementById('mast');
 const ftcta=document.getElementById('ftcta');
 const footerEl=document.querySelector('footer');
-let footerVisible=false;
+let footerNear=false;
 
 window.addEventListener('scroll',()=>{
   mast.classList.toggle('s',window.scrollY>50);
-  ftcta.classList.toggle('on', window.scrollY>500 && !footerVisible);
+  ftcta.classList.toggle('on', window.scrollY>500 && !footerNear);
 },{passive:true});
 
 const footObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    footerVisible=e.isIntersecting;
-    ftcta.classList.toggle('on', window.scrollY>500 && !footerVisible);
+    footerNear=e.isIntersecting;
+    ftcta.classList.toggle('on', window.scrollY>500 && !footerNear);
   });
-},{threshold:0,rootMargin:'0px 0px -10% 0px'});
+},{threshold:0, rootMargin:'0px 0px 150px 0px'});
 if(footerEl) footObs.observe(footerEl);
 
 /* ── HAMBURGER ── */
