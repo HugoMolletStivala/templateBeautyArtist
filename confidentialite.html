@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Élise Marceau</title>
+<link rel="icon" type="image/webp" href="favicon.webp">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<!--
+  ════════════════════════════════════════════════════════════
+  DOCUMENT LÉGAL — TEMPLATE À PERSONNALISER
+  Tous les champs entre [crochets] doivent être remplacés par
+  les informations réelles du client avant mise en ligne.
+  Vérifier en priorité : identité du responsable de traitement,
+  liste réelle des cookies/outils utilisés (analytics, réservation,
+  newsletter), durées de conservation, sous-traitants.
+  ════════════════════════════════════════════════════════════
+-->
+
+<style>
+:root{
+  --ink:#1A1118;--cream:#FBF7F4;--nude:#F0E8DF;--powder:#F2DAD8;
+  --rose:#D4A5A0;--champagne:#C8A96E;--blush:#E8C5BF;--mink:#8C6B68;
+  --off:rgba(26,17,24,.62);--off-lt:rgba(26,17,24,.38);--faint:rgba(26,17,24,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+#mast{position:sticky;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,4vw,60px);background:rgba(251,247,244,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,17,24,.08)}
+.mast-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,20px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.mast-back{font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--mink);display:flex;align-items:center;gap:8px;transition:color .3s}
+.mast-back:hover{color:var(--rose)}
+.mast-back svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+.legal-hero{background:var(--ink);color:var(--cream);padding:clamp(64px,9vw,108px) clamp(20px,5vw,80px) clamp(48px,6vw,76px);position:relative;overflow:hidden}
+.legal-hero::after{content:'§';position:absolute;right:-1%;bottom:-18%;font-family:'Cormorant Garamond',serif;font-size:clamp(180px,30vw,420px);color:rgba(212,165,160,.06);line-height:1;pointer-events:none}
+.legal-eyebrow{font-size:8.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.legal-eyebrow::before{content:'';width:26px;height:1px;background:var(--rose)}
+.legal-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,84px);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:18px}
+.legal-hed em{font-style:italic;color:var(--rose)}
+.legal-updated{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(251,247,244,.4);font-weight:300}
+
+.legal-body{max-width:880px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,40px) clamp(96px,11vw,140px)}
+.legal-intro{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(14px,1.5vw,17px);line-height:1.85;color:var(--off);padding-bottom:clamp(36px,4vw,56px);border-bottom:1px solid var(--faint);margin-bottom:clamp(36px,4vw,56px)}
+article.legal-art{padding:clamp(28px,3.5vw,44px) 0;border-bottom:1px solid var(--faint)}
+article.legal-art:last-child{border-bottom:none}
+.legal-art-num{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.15em;color:var(--rose);display:block;margin-bottom:10px}
+.legal-art h2{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,30px);font-weight:400;letter-spacing:-.01em;color:var(--ink);margin-bottom:16px}
+.legal-art h3{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.8vw,19px);font-weight:500;color:var(--mink);margin:18px 0 8px}
+.legal-art p{font-family:'EB Garamond',serif;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.85;color:var(--off);margin-bottom:14px}
+.legal-art p:last-child{margin-bottom:0}
+.legal-art ul{margin:0 0 14px 0;padding-left:22px}
+.legal-art li{font-family:'EB Garamond',serif;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.8;color:var(--off);margin-bottom:6px}
+.legal-art strong{color:var(--ink);font-weight:500}
+.ph{background:rgba(212,165,160,.22);border-bottom:1px dashed var(--rose);color:var(--mink);padding:0 3px;font-style:normal;white-space:nowrap}
+
+.tbl-wrap{overflow-x:auto;margin-bottom:14px}
+table.dtbl{width:100%;border-collapse:collapse;font-family:'EB Garamond',serif;font-size:14px}
+table.dtbl th{text-align:left;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose);font-weight:500;padding:10px 14px;border-bottom:1px solid var(--faint)}
+table.dtbl td{padding:12px 14px;border-bottom:1px solid var(--faint);color:var(--off);vertical-align:top}
+
+footer{background:#0E0A0D;color:rgba(251,247,244,.4);padding:32px clamp(20px,5vw,80px);text-align:center}
+footer a{color:rgba(251,247,244,.6);transition:color .3s}
+footer a:hover{color:var(--rose)}
+.f-copy{font-size:8.5px;letter-spacing:.1em;margin-top:10px;display:block;color:rgba(251,247,244,.25)}
+</style>
+</head>
+<body>
+
+<nav id="mast">
+  <a href="#" class="mast-logo">Élise Marceau</a>
+  <a href="index.html" class="mast-back">
+    <svg viewBox="0 0 14 14"><path d="M9 2L4 7l5 5"/></svg>
+    Retour au site
+  </a>
+</nav>
+
+<header class="legal-hero">
+  <div class="legal-eyebrow">Document légal</div>
+  <h1 class="legal-hed">Politique de<br><em>confidentialité.</em></h1>
+  <p class="legal-updated">Dernière mise à jour : <span class="ph">[JJ/MM/AAAA]</span></p>
+</header>
+
+<main class="legal-body">
+
+  <p class="legal-intro">La présente politique de confidentialité a pour objectif de vous informer, conformément au Règlement (UE) 2016/679 du 27 avril 2016 (« RGPD ») et à la loi n° 78-17 du 6 janvier 1978 modifiée relative à l'informatique et aux libertés, sur la manière dont <span class="ph">[Nom commercial]</span> collecte, utilise et protège vos données personnelles lorsque vous visitez ce site ou faites appel à ses services.</p>
+
+  <article class="legal-art">
+    <span class="legal-art-num">01</span>
+    <h2>Responsable du traitement</h2>
+    <p>Le responsable du traitement des données collectées sur ce site est :</p>
+    <ul>
+      <li><strong>Nom / Raison sociale :</strong> <span class="ph">[Nom commercial]</span></li>
+      <li><strong>Adresse :</strong> <span class="ph">[Adresse complète]</span></li>
+      <li><strong>E-mail :</strong> <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a></li>
+      <li><strong>Téléphone :</strong> <a href="tel:+33612345678">06 12 34 56 78</a></li>
+    </ul>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">02</span>
+    <h2>Données collectées</h2>
+    <p>Selon votre usage du site, les données suivantes peuvent être collectées :</p>
+    <div class="tbl-wrap">
+      <table class="dtbl">
+        <tr><th>Contexte</th><th>Données collectées</th></tr>
+        <tr><td>Formulaire de contact / réservation</td><td>Nom, prénom, e-mail, téléphone, message, date(s) souhaitée(s)</td></tr>
+        <tr><td>Prise de rendez-vous en ligne <span class="ph">[si applicable]</span></td><td>Identité, coordonnées, type de prestation, date et lieu de l'événement</td></tr>
+        <tr><td>Newsletter <span class="ph">[si applicable]</span></td><td>Adresse e-mail, prénom</td></tr>
+        <tr><td>Navigation sur le site</td><td>Adresse IP, type d'appareil et de navigateur, pages consultées, durée de visite (via cookies de mesure d'audience)</td></tr>
+      </table>
+    </div>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">03</span>
+    <h2>Finalités du traitement</h2>
+    <p>Vos données personnelles sont traitées pour les finalités suivantes :</p>
+    <ul>
+      <li>Répondre à vos demandes de contact, devis ou réservation ;</li>
+      <li>Gérer la relation commerciale et l'exécution des prestations (organisation, facturation, suivi) ;</li>
+      <li>Vous adresser, sous réserve de votre consentement, des communications commerciales (newsletter, offres) ;</li>
+      <li>Améliorer le site et mesurer son audience (statistiques de fréquentation) ;</li>
+      <li>Respecter nos obligations légales, comptables et fiscales.</li>
+    </ul>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">04</span>
+    <h2>Base légale des traitements</h2>
+    <p>Les traitements mis en œuvre reposent, selon les cas, sur :</p>
+    <ul>
+      <li><strong>L'exécution d'un contrat</strong> ou de mesures précontractuelles (devis, réservation, prestation) ;</li>
+      <li><strong>Le consentement</strong> de la personne concernée (newsletter, cookies non essentiels) ;</li>
+      <li><strong>L'intérêt légitime</strong> de <span class="ph">[Nom commercial]</span> (amélioration des services, sécurité du site) ;</li>
+      <li><strong>Le respect d'une obligation légale</strong> (conservation des documents comptables).</li>
+    </ul>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">05</span>
+    <h2>Destinataires des données</h2>
+    <p>Vos données sont destinées exclusivement à <span class="ph">[Nom commercial]</span> et, le cas échéant, aux sous-traitants techniques suivants, agissant pour son compte et dans le respect du RGPD :</p>
+    <ul>
+      <li><strong>Hébergement du site :</strong> <span class="ph">[Nom de l'hébergeur]</span></li>
+      <li><strong>Outil de réservation / agenda en ligne :</strong> <span class="ph">[Nom de l'outil, le cas échéant]</span></li>
+      <li><strong>Solution de gestion de newsletter :</strong> <span class="ph">[Nom de l'outil, le cas échéant]</span></li>
+      <li><strong>Outil de mesure d'audience :</strong> <span class="ph">[Nom de l'outil, le cas échéant]</span></li>
+    </ul>
+    <p>Vos données ne sont en aucun cas vendues ou cédées à des tiers à des fins commerciales.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">06</span>
+    <h2>Transfert hors Union européenne</h2>
+    <p>Certains outils utilisés (hébergement, statistiques) peuvent impliquer un transfert de données vers des serveurs situés hors de l'Union européenne. Dans ce cas, <span class="ph">[Nom commercial]</span> s'assure que ce transfert repose sur un cadre juridique adapté (clauses contractuelles types de la Commission européenne, décision d'adéquation, ou tout autre mécanisme prévu par le RGPD).</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">07</span>
+    <h2>Durée de conservation</h2>
+    <div class="tbl-wrap">
+      <table class="dtbl">
+        <tr><th>Données</th><th>Durée de conservation</th></tr>
+        <tr><td>Demandes de contact / devis non suivis</td><td>3 ans à compter du dernier contact</td></tr>
+        <tr><td>Clients (gestion de la relation contractuelle)</td><td>Durée de la relation commerciale, puis 3 ans à des fins de prospection</td></tr>
+        <tr><td>Documents comptables et factures</td><td>10 ans (obligation légale)</td></tr>
+        <tr><td>Inscrits à la newsletter</td><td>Jusqu'au désabonnement</td></tr>
+        <tr><td>Cookies de mesure d'audience</td><td>13 mois maximum</td></tr>
+      </table>
+    </div>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">08</span>
+    <h2>Sécurité des données</h2>
+    <p><span class="ph">[Nom commercial]</span> met en œuvre les mesures techniques et organisationnelles appropriées (accès sécurisé, sauvegardes, hébergement sécurisé) afin de protéger vos données personnelles contre toute perte, accès non autorisé, divulgation ou destruction.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">09</span>
+    <h2>Vos droits</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès :</strong> obtenir la confirmation que vos données sont traitées et en obtenir une copie ;</li>
+      <li><strong>Droit de rectification :</strong> faire corriger des données inexactes ou incomplètes ;</li>
+      <li><strong>Droit à l'effacement :</strong> demander la suppression de vos données, dans les limites prévues par la loi ;</li>
+      <li><strong>Droit à la limitation du traitement</strong> dans certains cas prévus par le RGPD ;</li>
+      <li><strong>Droit d'opposition</strong>, notamment à des fins de prospection commerciale ;</li>
+      <li><strong>Droit à la portabilité</strong> des données que vous nous avez fournies ;</li>
+      <li><strong>Droit de retirer votre consentement</strong> à tout moment, lorsque le traitement repose sur celui-ci.</li>
+    </ul>
+    <p>Pour exercer ces droits, vous pouvez nous contacter à l'adresse <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a>, en justifiant de votre identité. Une réponse vous sera apportée dans un délai maximal d'un mois.</p>
+    <p>Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>, 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">10</span>
+    <h2>Cookies et traceurs</h2>
+    <p>Le site peut déposer des cookies sur votre appareil lors de votre navigation :</p>
+    <h3>Cookies strictement nécessaires</h3>
+    <p>Indispensables au fonctionnement du site (navigation, sécurité). Ils ne nécessitent pas votre consentement.</p>
+    <h3>Cookies de mesure d'audience</h3>
+    <p>Permettent d'établir des statistiques de fréquentation anonymisées. <span class="ph">[Préciser si exemptés de consentement (ex. configuration CNIL-compliant) ou soumis à consentement]</span>.</p>
+    <h3>Cookies tiers / réseaux sociaux</h3>
+    <p><span class="ph">[Le cas échéant : Instagram, Pinterest, TikTok, etc. — soumis à votre consentement préalable]</span>.</p>
+    <p>Vous pouvez à tout moment gérer vos préférences via le bandeau de consentement affiché lors de votre première visite, ou directement dans les paramètres de votre navigateur.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">11</span>
+    <h2>Modification de la politique de confidentialité</h2>
+    <p><span class="ph">[Nom commercial]</span> se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour se conformer à toute évolution légale, réglementaire, jurisprudentielle ou technique. La version en vigueur est celle publiée sur le site à la date de votre consultation.</p>
+  </article>
+
+</main>
+
+<footer>
+  Site réalisé par <a href="https://hmsdigital.fr" target="_blank" rel="noopener">HMS Digital</a>
+  <span class="f-copy">© <span class="ph">[Année]</span> <span class="ph">[Nom commercial]</span> — Tous droits réservés</span>
+</footer>
+
+</body>
+</html>

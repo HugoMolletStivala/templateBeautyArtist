@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Élise Marceau</title>
+<link rel="icon" type="image/webp" href="favicon.webp">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<!--
+  ════════════════════════════════════════════════════════════
+  DOCUMENT LÉGAL — TEMPLATE À PERSONNALISER
+  Tous les champs entre [crochets] doivent être remplacés par
+  les informations réelles du client avant mise en ligne.
+  Champs à vérifier en priorité : identité de l'éditeur,
+  forme juridique, SIRET/RCS, hébergeur, directeur de publication.
+  ════════════════════════════════════════════════════════════
+-->
+
+<style>
+:root{
+  --ink:#1A1118;--cream:#FBF7F4;--nude:#F0E8DF;--powder:#F2DAD8;
+  --rose:#D4A5A0;--champagne:#C8A96E;--blush:#E8C5BF;--mink:#8C6B68;
+  --off:rgba(26,17,24,.62);--off-lt:rgba(26,17,24,.38);--faint:rgba(26,17,24,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* MASTHEAD */
+#mast{position:sticky;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,4vw,60px);background:rgba(251,247,244,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,17,24,.08)}
+.mast-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,20px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.mast-back{font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--mink);display:flex;align-items:center;gap:8px;transition:color .3s}
+.mast-back:hover{color:var(--rose)}
+.mast-back svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* HERO */
+.legal-hero{background:var(--ink);color:var(--cream);padding:clamp(64px,9vw,108px) clamp(20px,5vw,80px) clamp(48px,6vw,76px);position:relative;overflow:hidden}
+.legal-hero::after{content:'§';position:absolute;right:-1%;bottom:-18%;font-family:'Cormorant Garamond',serif;font-size:clamp(180px,30vw,420px);color:rgba(212,165,160,.06);line-height:1;pointer-events:none}
+.legal-eyebrow{font-size:8.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.legal-eyebrow::before{content:'';width:26px;height:1px;background:var(--rose)}
+.legal-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,84px);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:18px}
+.legal-hed em{font-style:italic;color:var(--rose)}
+.legal-updated{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(251,247,244,.4);font-weight:300}
+
+/* BODY */
+.legal-body{max-width:880px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,40px) clamp(96px,11vw,140px)}
+.legal-intro{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(14px,1.5vw,17px);line-height:1.85;color:var(--off);padding-bottom:clamp(36px,4vw,56px);border-bottom:1px solid var(--faint);margin-bottom:clamp(36px,4vw,56px)}
+article.legal-art{padding:clamp(28px,3.5vw,44px) 0;border-bottom:1px solid var(--faint)}
+article.legal-art:last-child{border-bottom:none}
+.legal-art-num{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.15em;color:var(--rose);display:block;margin-bottom:10px}
+.legal-art h2{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,30px);font-weight:400;letter-spacing:-.01em;color:var(--ink);margin-bottom:16px}
+.legal-art p{font-family:'EB Garamond',serif;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.85;color:var(--off);margin-bottom:14px}
+.legal-art p:last-child{margin-bottom:0}
+.legal-art ul{margin:0 0 14px 0;padding-left:22px}
+.legal-art li{font-family:'EB Garamond',serif;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.8;color:var(--off);margin-bottom:6px}
+.legal-art strong{color:var(--ink);font-weight:500}
+.ph{background:rgba(212,165,160,.22);border-bottom:1px dashed var(--rose);color:var(--mink);padding:0 3px;font-style:normal;white-space:nowrap}
+
+/* FOOTER */
+footer{background:#0E0A0D;color:rgba(251,247,244,.4);padding:32px clamp(20px,5vw,80px);text-align:center}
+footer a{color:rgba(251,247,244,.6);transition:color .3s}
+footer a:hover{color:var(--rose)}
+.f-copy{font-size:8.5px;letter-spacing:.1em;margin-top:10px;display:block;color:rgba(251,247,244,.25)}
+</style>
+</head>
+<body>
+
+<nav id="mast">
+  <a href="#" class="mast-logo">Élise Marceau</a>
+  <a href="index.html" class="mast-back">
+    <svg viewBox="0 0 14 14"><path d="M9 2L4 7l5 5"/></svg>
+    Retour au site
+  </a>
+</nav>
+
+<header class="legal-hero">
+  <div class="legal-eyebrow">Document légal</div>
+  <h1 class="legal-hed">Mentions<br><em>légales.</em></h1>
+  <p class="legal-updated">Dernière mise à jour : <span class="ph">[JJ/MM/AAAA]</span></p>
+</header>
+
+<main class="legal-body">
+
+  <p class="legal-intro">Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), il est porté à la connaissance des utilisateurs et visiteurs du site <span class="ph">[elisemarceau.fr]</span> les présentes mentions légales.</p>
+
+  <article class="legal-art">
+    <span class="legal-art-num">01</span>
+    <h2>Édition du site</h2>
+    <p>Le présent site est édité par :</p>
+    <ul>
+      <li><strong>Nom / Raison sociale :</strong> <span class="ph">[Nom commercial — ex. Élise Marceau]</span></li>
+      <li><strong>Forme juridique :</strong> <span class="ph">[Entreprise individuelle / Micro-entreprise / EURL / SASU / etc.]</span></li>
+      <li><strong>Capital social :</strong> <span class="ph">[Montant en € — le cas échéant]</span></li>
+      <li><strong>Numéro SIRET :</strong> <span class="ph">[XXX XXX XXX XXXXX]</span></li>
+      <li><strong>RCS / RM :</strong> <span class="ph">[Ville d'immatriculation et numéro, ou mention « non soumis »]</span></li>
+      <li><strong>Numéro de TVA intracommunautaire :</strong> <span class="ph">[FR XX XXX XXX XXX — ou « TVA non applicable, art. 293 B du CGI »]</span></li>
+      <li><strong>Siège social :</strong> <span class="ph">[Adresse complète]</span></li>
+      <li><strong>Téléphone :</strong> <a href="tel:+33612345678">06 12 34 56 78</a></li>
+      <li><strong>E-mail :</strong> <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a></li>
+    </ul>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">02</span>
+    <h2>Directeur de la publication</h2>
+    <p>Le directeur de la publication du site est <span class="ph">[Prénom NOM]</span>, en qualité de <span class="ph">[gérant(e) / responsable de l'activité]</span>. Il peut être contacté à l'adresse indiquée à l'article 1 des présentes mentions légales.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">03</span>
+    <h2>Hébergement du site</h2>
+    <p>Le site est hébergé par :</p>
+    <ul>
+      <li><strong>Nom de l'hébergeur :</strong> <span class="ph">[Nom de l'hébergeur — ex. OVH SAS, o2switch, Vercel Inc., etc.]</span></li>
+      <li><strong>Adresse :</strong> <span class="ph">[Adresse complète de l'hébergeur]</span></li>
+      <li><strong>Téléphone / Contact :</strong> <span class="ph">[Coordonnées de l'hébergeur]</span></li>
+    </ul>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">04</span>
+    <h2>Conception et développement</h2>
+    <p>Le présent site a été conçu et développé par <a href="https://hmsdigital.fr" target="_blank" rel="noopener">HMS Digital</a>, agence web basée dans la métropole lilloise.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">05</span>
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble des éléments composant le site — textes, images, photographies, graphismes, logos, icônes, vidéos, mise en page, charte graphique et code source — est, sauf mention contraire, la propriété exclusive de <span class="ph">[Nom commercial]</span> ou fait l'objet d'une autorisation d'utilisation.</p>
+    <p>Toute reproduction, représentation, modification, publication, adaptation ou exploitation de tout ou partie des éléments du site, par quelque procédé que ce soit, sans autorisation écrite préalable, est strictement interdite et constitutive d'une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+    <p>Les photographies présentées dans le portfolio sont protégées au titre du droit d'auteur et/ou font l'objet d'une autorisation des personnes photographiées (droit à l'image), conformément à l'article 9 du Code civil.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">06</span>
+    <h2>Données personnelles</h2>
+    <p>Les informations recueillies via le site (formulaire de contact, prise de rendez-vous, newsletter) font l'objet d'un traitement informatique destiné à la gestion de la relation client. Pour en savoir plus sur la nature des données collectées, leurs finalités et l'exercice de vos droits, veuillez consulter notre <a href="confidentialite.html">Politique de confidentialité</a>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">07</span>
+    <h2>Cookies</h2>
+    <p>Le site peut utiliser des cookies à des fins de mesure d'audience et d'amélioration de l'expérience utilisateur. Lors de votre première visite, un bandeau d'information vous permet d'accepter ou de refuser le dépôt de cookies non essentiels. Pour plus de détails, reportez-vous à la section « Cookies et traceurs » de notre <a href="confidentialite.html">Politique de confidentialité</a>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">08</span>
+    <h2>Limitation de responsabilité</h2>
+    <p><span class="ph">[Nom commercial]</span> s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur le site, mais ne peut garantir l'exhaustivité de ces informations. <span class="ph">[Nom commercial]</span> décline toute responsabilité pour les éventuelles erreurs, omissions ou indisponibilités du site, ainsi que pour tout dommage résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à disposition.</p>
+    <p>Le site peut contenir des liens hypertextes vers d'autres sites. <span class="ph">[Nom commercial]</span> n'exerce aucun contrôle sur ces sites et n'assume aucune responsabilité quant à leur contenu.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">09</span>
+    <h2>Droit applicable et juridiction compétente</h2>
+    <p>Les présentes mentions légales sont soumises au droit français. En cas de litige et à défaut d'accord amiable, le litige sera porté devant les tribunaux français compétents dans les conditions de droit commun.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">10</span>
+    <h2>Crédits</h2>
+    <p>Photographies : <span class="ph">[Nom du/de la photographe ou banque d'images]</span>. Polices de caractères : Cormorant Garamond, EB Garamond et Jost (Google Fonts, licence OFL).</p>
+  </article>
+
+</main>
+
+<footer>
+  Site réalisé par <a href="https://hmsdigital.fr" target="_blank" rel="noopener">HMS Digital</a>
+  <span class="f-copy">© <span class="ph">[Année]</span> <span class="ph">[Nom commercial]</span> — Tous droits réservés</span>
+</footer>
+
+</body>
+</html>

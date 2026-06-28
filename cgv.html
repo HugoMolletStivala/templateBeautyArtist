@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions générales de vente — Élise Marceau</title>
+<link rel="icon" type="image/webp" href="favicon.webp">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<!--
+  ════════════════════════════════════════════════════════════
+  DOCUMENT LÉGAL — TEMPLATE À PERSONNALISER
+  Tous les champs entre [crochets] doivent être remplacés par
+  les informations réelles du client avant mise en ligne.
+  Vérifier en priorité : identité du vendeur, grille tarifaire,
+  pourcentage d'acompte réel pratiqué, délais d'annulation,
+  nom du médiateur de la consommation (article 9 — obligatoire
+  pour toute entreprise française vendant à des consommateurs).
+  Cette trame couvre une activité de prestation de services
+  (type beauté/événementiel) ; à adapter si le client vend aussi
+  des produits physiques (livraison, garanties légales produits).
+  ════════════════════════════════════════════════════════════
+-->
+
+<style>
+:root{
+  --ink:#1A1118;--cream:#FBF7F4;--nude:#F0E8DF;--powder:#F2DAD8;
+  --rose:#D4A5A0;--champagne:#C8A96E;--blush:#E8C5BF;--mink:#8C6B68;
+  --off:rgba(26,17,24,.62);--off-lt:rgba(26,17,24,.38);--faint:rgba(26,17,24,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+#mast{position:sticky;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,4vw,60px);background:rgba(251,247,244,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,17,24,.08)}
+.mast-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,20px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.mast-back{font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--mink);display:flex;align-items:center;gap:8px;transition:color .3s}
+.mast-back:hover{color:var(--rose)}
+.mast-back svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+.legal-hero{background:var(--ink);color:var(--cream);padding:clamp(64px,9vw,108px) clamp(20px,5vw,80px) clamp(48px,6vw,76px);position:relative;overflow:hidden}
+.legal-hero::after{content:'§';position:absolute;right:-1%;bottom:-18%;font-family:'Cormorant Garamond',serif;font-size:clamp(180px,30vw,420px);color:rgba(212,165,160,.06);line-height:1;pointer-events:none}
+.legal-eyebrow{font-size:8.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.legal-eyebrow::before{content:'';width:26px;height:1px;background:var(--rose)}
+.legal-hed{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,84px);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:18px}
+.legal-hed em{font-style:italic;color:var(--rose)}
+.legal-updated{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(251,247,244,.4);font-weight:300}
+
+.legal-body{max-width:880px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,40px) clamp(96px,11vw,140px)}
+.legal-intro{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(14px,1.5vw,17px);line-height:1.85;color:var(--off);padding-bottom:clamp(36px,4vw,56px);border-bottom:1px solid var(--faint);margin-bottom:clamp(36px,4vw,56px)}
+article.legal-art{padding:clamp(28px,3.5vw,44px) 0;border-bottom:1px solid var(--faint)}
+article.legal-art:last-child{border-bottom:none}
+.legal-art-num{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.15em;color:var(--rose);display:block;margin-bottom:10px}
+.legal-art h2{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,30px);font-weight:400;letter-spacing:-.01em;color:var(--ink);margin-bottom:16px}
+.legal-art h3{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.8vw,19px);font-weight:500;color:var(--mink);margin:18px 0 8px}
+.legal-art p{font-family:'EB Garamond',serif;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.85;color:var(--off);margin-bottom:14px}
+.legal-art p:last-child{margin-bottom:0}
+.legal-art ul{margin:0 0 14px 0;padding-left:22px}
+.legal-art li{font-family:'EB Garamond',serif;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.8;color:var(--off);margin-bottom:6px}
+.legal-art strong{color:var(--ink);font-weight:500}
+.ph{background:rgba(212,165,160,.22);border-bottom:1px dashed var(--rose);color:var(--mink);padding:0 3px;font-style:normal;white-space:nowrap}
+.callout{background:var(--powder);border-left:3px solid var(--rose);padding:18px 22px;margin:6px 0 18px;border-radius:0 2px 2px 0}
+.callout p{margin-bottom:0;color:var(--ink)}
+
+footer{background:#0E0A0D;color:rgba(251,247,244,.4);padding:32px clamp(20px,5vw,80px);text-align:center}
+footer a{color:rgba(251,247,244,.6);transition:color .3s}
+footer a:hover{color:var(--rose)}
+.f-copy{font-size:8.5px;letter-spacing:.1em;margin-top:10px;display:block;color:rgba(251,247,244,.25)}
+</style>
+</head>
+<body>
+
+<nav id="mast">
+  <a href="#" class="mast-logo">Élise Marceau</a>
+  <a href="index.html" class="mast-back">
+    <svg viewBox="0 0 14 14"><path d="M9 2L4 7l5 5"/></svg>
+    Retour au site
+  </a>
+</nav>
+
+<header class="legal-hero">
+  <div class="legal-eyebrow">Document légal</div>
+  <h1 class="legal-hed">Conditions<br>générales de<br><em>vente.</em></h1>
+  <p class="legal-updated">Dernière mise à jour : <span class="ph">[JJ/MM/AAAA]</span></p>
+</header>
+
+<main class="legal-body">
+
+  <p class="legal-intro">Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre <span class="ph">[Nom commercial]</span> et toute personne physique non professionnelle (« le Client ») souhaitant réserver une prestation présentée sur le site <span class="ph">[elisemarceau.fr]</span>. Toute réservation implique l'acceptation pleine et entière des présentes CGV.</p>
+
+  <article class="legal-art">
+    <span class="legal-art-num">01</span>
+    <h2>Identité du vendeur</h2>
+    <ul>
+      <li><strong>Nom / Raison sociale :</strong> <span class="ph">[Nom commercial]</span></li>
+      <li><strong>Forme juridique :</strong> <span class="ph">[Statut juridique]</span></li>
+      <li><strong>SIRET :</strong> <span class="ph">[Numéro SIRET]</span></li>
+      <li><strong>Adresse :</strong> <span class="ph">[Adresse complète]</span></li>
+      <li><strong>Contact :</strong> <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a> · <a href="tel:+33612345678">06 12 34 56 78</a></li>
+    </ul>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">02</span>
+    <h2>Objet et champ d'application</h2>
+    <p>Les présentes CGV s'appliquent à l'ensemble des prestations de maquillage et de mise en beauté proposées par <span class="ph">[Nom commercial]</span>, telles que décrites sur le site : maquillage mariage, soirée et événement, mise en beauté, cours de maquillage, shooting photo et prestation à domicile (« les Prestations »).</p>
+    <p><span class="ph">[Nom commercial]</span> se réserve le droit d'adapter ou de modifier les présentes CGV à tout moment. Les CGV applicables sont celles en vigueur à la date de la réservation par le Client.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">03</span>
+    <h2>Tarifs</h2>
+    <p>Les prix des Prestations sont indiqués en euros sur le site, à titre indicatif pour les formules « à partir de », et font l'objet d'un devis personnalisé pour toute prestation sur mesure (shooting, VIP, formules groupe). <span class="ph">[Préciser si les prix incluent ou non la TVA selon le régime fiscal du prestataire]</span>.</p>
+    <p>Le devis remis au Client précise le détail de la Prestation, son prix définitif, les conditions de déplacement éventuelles et les modalités de paiement. Le devis est valable <span class="ph">[durée — ex. 30 jours]</span> à compter de son émission.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">04</span>
+    <h2>Réservation et confirmation</h2>
+    <p>Toute demande de réservation effectuée via le site, par e-mail ou par téléphone constitue une demande, et non une confirmation définitive. La réservation n'est considérée comme ferme et définitive qu'à réception :</p>
+    <ul>
+      <li>du devis signé ou de l'accord exprès du Client (e-mail, formulaire) ; et</li>
+      <li>du versement de l'acompte prévu à l'article 5.</li>
+    </ul>
+    <p>Pour les prestations de type mariage, il est recommandé de réserver entre 6 et 12 mois à l'avance ; pour les autres événements, un délai de 2 à 4 semaines est généralement suffisant.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">05</span>
+    <h2>Modalités de paiement et acompte</h2>
+    <p>La réservation est confirmée par le versement d'un acompte correspondant à <span class="ph">[30 %]</span> du montant total de la Prestation. Le solde est dû <span class="ph">[au plus tard le jour de la prestation / à réception de facture, selon modalités convenues]</span>.</p>
+    <p>Les moyens de paiement acceptés sont : <span class="ph">[virement bancaire, carte bancaire, espèces, etc.]</span>.</p>
+    <p>L'acompte versé n'est ni remboursable ni reportable, sauf application des dispositions de l'article 6 ci-dessous relatives à l'annulation et au report.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">06</span>
+    <h2>Annulation, report et modification</h2>
+    <h3>Annulation par le Client</h3>
+    <ul>
+      <li>Annulation plus de <span class="ph">[30]</span> jours avant la date de la Prestation : l'acompte versé est conservé par <span class="ph">[Nom commercial]</span> à titre d'indemnisation, sauf accord contraire.</li>
+      <li>Annulation entre <span class="ph">[7 et 30]</span> jours avant la date : <span class="ph">[50 %]</span> du montant total de la Prestation reste dû.</li>
+      <li>Annulation moins de <span class="ph">[7]</span> jours avant la date, ou non-présentation le jour J : la totalité de la Prestation reste due.</li>
+    </ul>
+    <h3>Report par le Client</h3>
+    <p>Une demande de report peut être étudiée sous réserve de disponibilité, et de préférence formulée au moins <span class="ph">[15]</span> jours avant la date initialement prévue. <span class="ph">[Nom commercial]</span> ne garantit pas la disponibilité à la nouvelle date souhaitée.</p>
+    <h3>Annulation par le prestataire</h3>
+    <p>En cas d'empêchement majeur (maladie, accident, force majeure), <span class="ph">[Nom commercial]</span> s'engage à prévenir le Client dans les plus brefs délais et à proposer, selon les disponibilités, une solution de remplacement, un report ou le remboursement intégral des sommes versées.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">07</span>
+    <h2>Droit de rétractation</h2>
+    <div class="callout">
+      <p>Conformément à l'article L.221-28, 11° du Code de la consommation, le droit de rétractation ne peut être exercé pour les contrats de prestations de services dont l'exécution a commencé, avec l'accord préalable et exprès du Client, et pour lesquels le Client a renoncé à son droit de rétractation, ainsi que pour les prestations devant être exécutées à une date ou selon une périodicité déterminée (article L.221-28, 12°), ce qui est le cas des prestations de maquillage liées à un événement daté (mariage, soirée, shooting).</p>
+    </div>
+    <p>Lorsque le droit de rétractation s'applique (par exemple pour une réservation effectuée sans date d'événement déterminée, telle qu'un bon cadeau ou un cours de maquillage à planifier ultérieurement), le Client dispose d'un délai de 14 jours à compter de la réservation pour exercer ce droit, sans avoir à justifier de motif, en adressant sa demande à <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">08</span>
+    <h2>Exécution de la prestation</h2>
+    <p>Le Client s'engage à mettre à disposition de <span class="ph">[Nom commercial]</span>, le jour de la Prestation, un espace propre, calme et suffisamment éclairé, ainsi qu'un accès à une prise électrique et à un point d'eau si la Prestation se déroule au domicile du Client ou sur un lieu tiers.</p>
+    <p>Le Client s'engage à signaler préalablement toute allergie, intolérance, pathologie cutanée ou traitement médical pouvant interagir avec les produits utilisés. <span class="ph">[Nom commercial]</span> recommande un test de réaction cutanée (patch test) au moins 48h avant toute prestation pour les peaux sensibles ou sujettes aux allergies.</p>
+    <p>Tout retard imputable au Client supérieur à <span class="ph">[15]</span> minutes pourra entraîner une réduction du temps de prestation, sans réduction du prix convenu.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">09</span>
+    <h2>Responsabilité</h2>
+    <p><span class="ph">[Nom commercial]</span> s'engage à exécuter la Prestation avec professionnalisme, dans le respect des règles d'hygiène applicables (désinfection du matériel entre chaque prestation, utilisation de produits cosmétiques conformes à la réglementation en vigueur).</p>
+    <p>La responsabilité de <span class="ph">[Nom commercial]</span> ne saurait être engagée en cas de réaction allergique non signalée préalablement par le Client, d'utilisation de produits personnels apportés par le Client, ou de tout dommage résultant d'une information incomplète ou inexacte communiquée par le Client sur son état de santé.</p>
+    <p><span class="ph">[Nom commercial]</span> dispose d'une assurance responsabilité civile professionnelle souscrite auprès de <span class="ph">[Nom de l'assureur — police n° XXXXX]</span>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">10</span>
+    <h2>Droit à l'image et propriété intellectuelle</h2>
+    <p>Sauf opposition expresse du Client formulée par écrit avant la Prestation, des photographies pourront être prises pendant ou après la réalisation de la Prestation, à des fins de portfolio et de communication sur le site, les réseaux sociaux et tout support de communication de <span class="ph">[Nom commercial]</span>, conformément à l'article 9 du Code civil relatif au droit à l'image.</p>
+    <p>Le Client peut à tout moment demander le retrait d'une photographie le concernant en écrivant à <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">11</span>
+    <h2>Données personnelles</h2>
+    <p>Les données personnelles collectées dans le cadre de la réservation et de l'exécution de la Prestation sont traitées conformément à notre <a href="confidentialite.html">Politique de confidentialité</a>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">12</span>
+    <h2>Force majeure</h2>
+    <p>Aucune des parties ne pourra être tenue responsable de l'inexécution de ses obligations résultant d'un cas de force majeure au sens de l'article 1218 du Code civil (catastrophe naturelle, pandémie, décision administrative, etc.). La partie empêchée informera l'autre partie dans les meilleurs délais.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">13</span>
+    <h2>Réclamations et médiation de la consommation</h2>
+    <p>En cas de litige, le Client est invité à contacter en priorité <span class="ph">[Nom commercial]</span> à l'adresse <a href="mailto:contact@elisemarceau.fr">contact@elisemarceau.fr</a> afin de rechercher une solution amiable.</p>
+    <p>À défaut de résolution amiable, et conformément aux articles L.611-1 et suivants du Code de la consommation, le Client a la possibilité de recourir gratuitement au service de médiation suivant :</p>
+    <ul>
+      <li><strong>Médiateur de la consommation :</strong> <span class="ph">[Nom du médiateur — ex. CNPM Médiation Consommation, ou médiateur sectoriel]</span></li>
+      <li><strong>Site internet :</strong> <span class="ph">[URL du médiateur]</span></li>
+      <li><strong>Adresse :</strong> <span class="ph">[Adresse du médiateur]</span></li>
+    </ul>
+    <p>Le Client peut également déposer une plainte en ligne via la plateforme européenne de Règlement en Ligne des Litiges (RLL), accessible à l'adresse : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+  </article>
+
+  <article class="legal-art">
+    <span class="legal-art-num">14</span>
+    <h2>Droit applicable et juridiction compétente</h2>
+    <p>Les présentes CGV sont soumises au droit français. En cas de litige persistant après tentative de résolution amiable et de médiation, et à défaut de disposition légale impérative contraire applicable au Client consommateur, les tribunaux français seront seuls compétents.</p>
+  </article>
+
+</main>
+
+<footer>
+  Site réalisé par <a href="https://hmsdigital.fr" target="_blank" rel="noopener">HMS Digital</a>
+  <span class="f-copy">© <span class="ph">[Année]</span> <span class="ph">[Nom commercial]</span> — Tous droits réservés</span>
+</footer>
+
+</body>
+</html>
