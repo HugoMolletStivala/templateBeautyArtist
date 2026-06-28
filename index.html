@@ -1194,10 +1194,21 @@ window.addEventListener('load',()=>{
 /* ── NAV SCROLL ── */
 const mast=document.getElementById('mast');
 const ftcta=document.getElementById('ftcta');
+const footerEl=document.querySelector('footer');
+let footerVisible=false;
+
 window.addEventListener('scroll',()=>{
   mast.classList.toggle('s',window.scrollY>50);
-  ftcta.classList.toggle('on',window.scrollY>500);
+  ftcta.classList.toggle('on', window.scrollY>500 && !footerVisible);
 },{passive:true});
+
+const footObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    footerVisible=e.isIntersecting;
+    ftcta.classList.toggle('on', window.scrollY>500 && !footerVisible);
+  });
+},{threshold:0,rootMargin:'0px 0px -10% 0px'});
+if(footerEl) footObs.observe(footerEl);
 
 /* ── HAMBURGER ── */
 const hbg=document.getElementById('hbg');
